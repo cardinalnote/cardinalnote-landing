@@ -1,21 +1,59 @@
-MIT License
-
 Copyright (c) 2025 Cardinalnote
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This Agreement is made and entered into as of 2025/02/19, Feburary 19th 2025, by and between Cardinalnote, a company organized and existing under the laws of ALL COMMERCIAL REGIONS and COUNTRIES, with its principal place of business at HO CHI MINH, VIETNAM ("Licensor"), and AUTHORIZED USERS (meaning an individual, employee, contractor, or agent of Licensee who has been authorized by Licensee to access and use the Application in accordance with the terms of this Agreement) to enter into a binding agreement", existing under the laws of AUTHORIZED USERS' REGION(S) and/or COUNTRY(S), and UNITED STATES OF AMERICA, with its principal place of the  VIETNAM ("Licensee").
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous communications and proposals, whether oral or written, including any attempted modifications or renewals of prior agreements unless expressly agreed to in writing by both parties.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+Any attempt by Licensee to create or enter into a new license agreement for the Application with previous "Application Version(s)" ("Application Version" means the specific release of the Application, identified by a version number in accordance with the Cardinalnote Versioning Semantic Standard, source code, built files, and/or production tools of the Application contained by the Versioning Standard) of the Application, or "Non-Current" (Aplication Version which has been superseded) versions/releases, shall be null and void, and shall not supersede or otherwise affect the validity and enforceability of this Agreement.  In such event, Licensor shall have the right, at its sole discretion, to immediately terminate this Agreement.
+
+WHEREAS, Licensor has developed a proprietary web application known as Cardninalnote (the "Application"); and
+
+WHEREAS, Licensee desires to access and use the Application under the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:
+
+1. Grant of License:
+
+Licensor grants to Licensee a Non-Exclusive, Perpetual license to access and use the Application solely for personal use.  This license grants Licensee the right to use the Application subject to the terms of this Agreement.
+
+2. Restrictions:
+
+Licensee shall not:
+
+    Access or use the Application for any purpose other than as expressly permitted herein.
+    Modify, translate, reverse engineer, decompile, or disassemble the Application.
+    Sublicense, rent, lease, or otherwise distribute the Application or any portion thereof.
+    Allow access to the Application by unauthorized users.
+    Use the Application in a manner that could damage, disable, overburden, or impair Licensor's servers or networks.
+    Remove or alter any copyright notices or other proprietary markings on the Application.
+
+3. Access and Usage:
+
+    Licensee shall be responsible for obtaining and maintaining all necessary hardware, software, and internet access required to access and use the Application.
+    Licensor shall provide Licensee with access credentials (e.g., usernames and passwords) for authorized users.
+    Licensee shall be responsible for maintaining the confidentiality of access credentials.
+
+4. Term and Termination:
+
+This Agreement shall commence on the Effective Date and shall continue for an Indefinite period unless terminated earlier in accordance with the terms herein for the correspoding "Application Version" or the "Updated Version" of the Application.
+
+5. Ownership:
+
+Licensor retains all right, title, and interest in and to the Application, including all intellectual property rights therein.  This Agreement does not transfer ownership of the Application to Licensee.
+
+6. Warranty and Disclaimer:
+
+THE APPLICATION IS LICENSED "AS IS" WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.  LICENSOR SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE APPLICATION OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+7. Indemnification:
+
+Licensee shall indemnify and hold Licensor harmless from any and all claims, liabilities, damages, and expenses arising out of Licensee's use of the Application.
+
+8. Governing Law:
+
+This Agreement shall be governed by and construed in accordance with the laws of the Licensee's region/country.
+
+9. Entire Agreement:
+
+This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior or contemporaneous communications and proposals, whether oral or written.  
