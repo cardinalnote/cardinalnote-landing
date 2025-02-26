@@ -39,9 +39,13 @@
     findCenter();
   }
 
-  function mouseMove( event: MouseEvent ) {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+  function mouseMove( event: MouseEvent | TouchEvent ) {
+    let where;
+    if( event.type == "touchmove" ) where = (event as TouchEvent).changedTouches[0];
+    else where = (event as MouseEvent);
+
+    mouseX = where.clientX;
+    mouseY = where.clientY;
   }
 
   function findCenter() {
@@ -162,7 +166,8 @@
 </script>
 
 <canvas bind:this={ canvas } 
-  onmousemove={ mouseMove }>
+  onmousemove={ mouseMove }
+  ontouchmove={ mouseMove }>
 <!-- {@render children()} -->
 </canvas>
 
