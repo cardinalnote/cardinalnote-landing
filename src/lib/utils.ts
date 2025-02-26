@@ -1,4 +1,4 @@
-export function checkForMount( type: "class" | "id" | "tag", idClass: string | undefined ): Promise<Element> {
+export function domGetNode( type: "class" | "id" | "tag", idClass: string | undefined ): Promise<Element> {
   if( idClass == undefined ) idClass = "html";
 
   return new Promise( (resolve, reject) => {

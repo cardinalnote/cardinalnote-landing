@@ -1,6 +1,5 @@
 <script>
   import { IsDarkMode } from "$lib/detectTheme.js";
-
   export let width = "100%", height = "100%";
 
   //TODO aria local

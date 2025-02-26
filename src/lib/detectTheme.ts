@@ -1,7 +1,7 @@
 import { MediaQuery } from "svelte/reactivity";
 import { writable } from "svelte/store";
 import { browser } from "$app/environment";
-import { checkForMount } from "$lib/utils.js"
+import { domGetNode } from "$lib/utils.js";
 
 const InitialColorPref = new MediaQuery('prefers-color-scheme: dark');
 export const IsDarkMode = createDarkModeDetector( InitialColorPref.current );
@@ -25,7 +25,7 @@ function createDarkModeDetector( mode: boolean /* = InitialColorPref.current */ 
 
   async function flashRootStyle( val: boolean, setToDefault = false ) {
 
-    let root = await checkForMount( "tag", "html" ).catch( err => {return;} );
+    let root = await domGetNode( "tag", "html" ).catch( err => {return;} );
 
     if( root ) {
 
