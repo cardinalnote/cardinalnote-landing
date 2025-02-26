@@ -12,3 +12,9 @@
 !svelte.config.js
 !tsconfig.json
 !vite.config.ts
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
