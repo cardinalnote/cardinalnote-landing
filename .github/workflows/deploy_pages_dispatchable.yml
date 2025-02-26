@@ -41,8 +41,7 @@ jobs:
         run: pnpm install
       - name: distribute
         env:
-          # Change base on repo or desired location '/' will post to github.io base (origin)
-          BASE_PATH: '/'
+          BASE_PATH: ''
         run: |
           pnpm run build
           touch build/.nojekyll
