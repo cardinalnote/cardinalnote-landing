@@ -1,12 +1,12 @@
 <script module>
+  import { MediaQuery } from "svelte/reactivity";
 
-  export const SpeedControl = $state( {current: 60} /* default Speed */ );
+  const IsMotionAllowed = $state( new MediaQuery('prefers-reduced-motion') );
+
+  export const SpeedControl = $state( {current: IsMotionAllowed ? 60 : 0 } /* default Speed */ );
   let savedSpeed = $state( SpeedControl.current /* default Speed */ );
   let hidden = $state( false );
-  let clicked = $state( false );
-
-  // const detect = new MediaQuery('prefers-reduced-motion');
-  // const IsMotionAllowed = writable( !detect );
+  let clicked = $state( false /* false-if true svgs need to change*/ );
 
   const max = 1000;
   

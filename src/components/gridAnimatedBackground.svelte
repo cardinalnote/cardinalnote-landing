@@ -106,6 +106,11 @@
     const pattern = ctx.createPattern(bkgImage, 'repeat')!;
     ctx.fillStyle = pattern;
 
+    if( SpeedControl.current == 0 ) {
+      ctx.fillRect( 0, 0, cw, ch );
+      return;
+    }
+
     ctx.save();
     ctx.translate(scrollX, scrollY);
     ctx.fillRect( -scrollX, -scrollY, cw, ch );
@@ -120,14 +125,15 @@
     const now = Date.now();
     const elapsed = now - animateThen;
 
-    if( SpeedControl.current == 0 ) return;
-
     if (elapsed > interval && ctx) {
       animateThen = now - (elapsed % interval);
       // console.log( (-(elapsed - targetFPS)).toFixed() );
 
+      if( SpeedControl.current != 0 ) {
+        updateScroll( );
+      }
+
       ctx.clearRect(0, 0, cw, ch);
-      updateScroll( );
       drawCircularRing( );
       drawBkgPattern( );
     }
