@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { isDarkMode } from "$lib/detectTheme.js";
   export let width = "100%", height = "100%";
+
 </script>
 
 <svg width={ width } height={ height } viewBox="0 0 127 52.5" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="a" x="-.015" y="-.0353" width="1.03" height="1.07" color-interpolation-filters="sRGB">
-      <feFlood flood-color={ isDarkMode ? "#FFF" : "#000" } result="flood"/>
+      <feFlood flood-color= "#FFF" result="flood"/>
       <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
       <feGaussianBlur in="composite1" result="blur" stdDeviation="0.619"/>
       <feOffset result="offset"/>
@@ -49,15 +49,15 @@
 
 <style>
   svg {
-    position: var( --position, "block" );
+    position: "block";
 
     .titleArrow {
       pointer-events: all;
 
       .arrow:hover {
         stroke-width: 0.1;
-        stroke: white;
-        fill: #000000fe;
+        stroke: var( --theme_stroke_arrow );
+        fill: var( --theme_arrow );
         filter: url("#hover");
         transition: stroke-width 2s ease-out, 2s ease-in-out, fill 2s ease-in-out;
       }

@@ -1,17 +1,16 @@
 <script>
-  import { isDarkMode } from "$lib/detectTheme.js";
-
+  import { IsDarkMode } from "$lib/detectTheme.js";
   export let width = "100%", height = "100%";
 
   //TODO aria local
 </script>
 
-<button onclick={ () => { $isDarkMode = !$isDarkMode; } } aria-label={ "dark-light mode toggle" }>
+<button onclick={ () => IsDarkMode.toggle() } aria-label={ "dark-light mode toggle" }>
   <svg width={ width } height={ height } viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-    <path class={ $isDarkMode ? "darken moon" : "moon" } 
-      stroke={ isDarkMode ? "#556" : "#000" }
+    <path class={ $IsDarkMode ? "darken moon" : "moon" } 
+      stroke="#fff"
       pathLength="1" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    <g class={ $isDarkMode ? "sun" : "lightenUp sun" } stroke={ isDarkMode ? "#556" : "orange" } >
+    <g class={ $IsDarkMode ? "sun" : "lightenUp sun" } stroke="#fff" >
       <circle pathLength="2" cx="12" cy="12" r="6" />
       <g class="sun-beams">
         <line pathLength="2" x1="12" y1="1" x2="12" y2="3" />
@@ -31,13 +30,13 @@
   button:hover {
     svg {
       .moon {
-        fill: #6e1186;
-        stroke: #6e1186;
+        fill: var( --hover-moon );
+        stroke: var( --hover-moon );
       }
 
       .sun {
-        fill: #e26411;
-        stroke: #e26411;
+        fill: var( --hover-sun );
+        stroke: var( --hover-sun );
       }
 
     }
@@ -53,6 +52,7 @@
 
     svg {
       .moon {
+        stroke: var( --untouched-moon );
         stroke-dasharray: 0 1;
         opacity: 0;
         transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in, stroke 1s ease-in, fill 1s ease-in;
@@ -64,6 +64,7 @@
       }
 
       .sun {
+        stroke: var( --untouched-sun );
         opacity: 0;
         transition: opacity 300ms ease-in, stroke 1s ease-in, fill 1s ease-in;
 
@@ -91,15 +92,4 @@
       }
     }
   }
-
-  /* .app.dark .moon-icon {
-    stroke-dasharray: 1px 1px;
-    opacity: 1;
-  }
-
-  .app.dark .sun-icon {
-    stroke-dasharray: 0px 1px;
-    opacity: 0;
-  } */
-
 </style>

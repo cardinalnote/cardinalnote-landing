@@ -1,0 +1,66 @@
+name: HostDist
+
+on:
+  workflow_dispatch: # manual workflow 
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  
+  check-cred:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Ensure Secret is Present
+        run: |
+          if [ -z "${{ secrets.DEPLOYMENT_KEY }}" ]; then
+            echo "Error: DEPLOYMENT_KEY is not set."
+            exit 1
+          fi
+
+  build-prod:
+    needs: check-cred
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: distribute
+        env:
+          # Change base on repo or desired location '/' will post to github.io base (origin)
+          BASE_PATH: '/'
+        run: |
+          pnpm run build
+          touch build/.nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build'
+
+  deploy:
+    needs: build-prod
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

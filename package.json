@@ -3,21 +3,24 @@
 	"version": "0.0.1",
 	"description": "cardinalnote website landing page",
 	"license": "PROPRIETARY SOFTWARE LICENSE AGREEMENT",
-	"licenses": [{
-		"type": "PROPRIETARY SOFTWARE LICENSE AGREEMENT",
-		"url": "file://./LICENSE"
-	}],
+	"licenses": [
+		{
+			"type": "PROPRIETARY SOFTWARE LICENSE AGREEMENT",
+			"url": "file://./LICENSE"
+		}
+	],
 	"author": "Cardinalnote <team@cardinalnote.com> (https://cardinalnote.com/)",
-	"private": true,
+	"private": false,
 	"type": "module",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/cardinalnote/cardinalnote-landing.git"
-  },
+		"type": "git",
+		"url": "https://github.com/cardinalnote/cardinalnote-landing.git"
+	},
 	"homepage": "https://github.com/cardinalnote/cardinalnote-landing",
-  "bugs": "https://github.com/cardinalnote/cardinalnote-landing/issues",
+	"bugs": "https://github.com/cardinalnote/cardinalnote-landing/issues",
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^4.0.0",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"svelte": "^5.0.0",

@@ -1,9 +1,19 @@
 <script lang="ts">
-  import * as globals from "../global.css";
-  import * as colors from "../colors.css";
+  import type { Snippet } from 'svelte';
+  import { onMount } from "svelte";
+  import * as globals from "../global.css"; // ! Colors added
+  import { IsDarkMode } from "$lib/detectTheme.js";
+    import { base } from '$app/paths';
 
-  let { children } = $props();
+  let { children } = $props<{ children?: Snippet }>();
 
+  onMount(() => {
+    IsDarkMode.loadInitialStore();
+  });
 </script>
 
-{@render children()}
+{#if children}
+  {@render children()}
+{:else}
+  <a href={ `${base || "https://cardinalnote.com"}/` }>CardinalNote</a>
+{/if}

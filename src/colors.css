@@ -1,13 +1,43 @@
 :root {
-  --theme_background: #4e4e4e;
+  --theme_background: #c5c5c5;
   --theme_lightText: #000;
 
   /** SVG */
   /* -- Light Theme (lt) -- */
-  --theme_text: #000;
-  --theme_arrow: #FFF;
+  --theme_text: #ff0000;
+  --theme_arrow: #000;
   --theme_blur_arrow: #000;
-  --theme_stroke_arrow: #000;
+  --theme_stroke_arrow: #FFF;
+
+  --untouched-moon: #556;
+  --hover-moon: #6e1186;
+
+  --untouched-sun: #556;
+  --hover-sun: #e26411;
+}
+
+:root.light-mode {
+  --theme_background: #c5c5c5;
+  --theme_lightText: #000;
+
+  /** SVG */
+  /* -- Light Theme (lt) -- */
+  --theme_text: #ffffff;
+  --theme_arrow: #000;
+  --theme_blur_arrow: #000;
+  --theme_stroke_arrow: #FFF;
+}
+
+:root.dark-mode {
+  --theme_background: #4e4e4e;
+  --theme_lightText: #FFF;
+
+  /** SVG */
+  /* -- Dark Theme (dt) -- */
+  --theme_text: #FFF;
+  --theme_arrow: #000;
+  --theme_blur_arrow: #FFF;
+  --theme_stroke_arrow: #FFF;
 }
 
 @media (prefers-color-scheme: dark) {
